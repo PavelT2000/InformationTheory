@@ -1,0 +1,16 @@
+C:\My\2kurs\TI\InformationTheory\Lab1\DecimationMethod\DecimationMethod\DecimationMethod\bin\Debug\net10.0-windows\DecimationMethod.exe
+C:\My\2kurs\TI\InformationTheory\Lab1\DecimationMethod\DecimationMethod\DecimationMethod\bin\Debug\net10.0-windows\DecimationMethod.deps.json
+C:\My\2kurs\TI\InformationTheory\Lab1\DecimationMethod\DecimationMethod\DecimationMethod\bin\Debug\net10.0-windows\DecimationMethod.runtimeconfig.json
+C:\My\2kurs\TI\InformationTheory\Lab1\DecimationMethod\DecimationMethod\DecimationMethod\bin\Debug\net10.0-windows\DecimationMethod.dll
+C:\My\2kurs\TI\InformationTheory\Lab1\DecimationMethod\DecimationMethod\DecimationMethod\bin\Debug\net10.0-windows\DecimationMethod.pdb
+C:\My\2kurs\TI\InformationTheory\Lab1\DecimationMethod\DecimationMethod\DecimationMethod\obj\Debug\net10.0-windows\DecimationMethod.Form1.resources
+C:\My\2kurs\TI\InformationTheory\Lab1\DecimationMethod\DecimationMethod\DecimationMethod\obj\Debug\net10.0-windows\DecimationMethod.csproj.GenerateResource.cache
+C:\My\2kurs\TI\InformationTheory\Lab1\DecimationMethod\DecimationMethod\DecimationMethod\obj\Debug\net10.0-windows\DecimationMethod.GeneratedMSBuildEditorConfig.editorconfig
+C:\My\2kurs\TI\InformationTheory\Lab1\DecimationMethod\DecimationMethod\DecimationMethod\obj\Debug\net10.0-windows\DecimationMethod.AssemblyInfoInputs.cache
+C:\My\2kurs\TI\InformationTheory\Lab1\DecimationMethod\DecimationMethod\DecimationMethod\obj\Debug\net10.0-windows\DecimationMethod.AssemblyInfo.cs
+C:\My\2kurs\TI\InformationTheory\Lab1\DecimationMethod\DecimationMethod\DecimationMethod\obj\Debug\net10.0-windows\DecimationMethod.csproj.CoreCompileInputs.cache
+C:\My\2kurs\TI\InformationTheory\Lab1\DecimationMethod\DecimationMethod\DecimationMethod\obj\Debug\net10.0-windows\DecimationMethod.dll
+C:\My\2kurs\TI\InformationTheory\Lab1\DecimationMethod\DecimationMethod\DecimationMethod\obj\Debug\net10.0-windows\refint\DecimationMethod.dll
+C:\My\2kurs\TI\InformationTheory\Lab1\DecimationMethod\DecimationMethod\DecimationMethod\obj\Debug\net10.0-windows\DecimationMethod.pdb
+C:\My\2kurs\TI\InformationTheory\Lab1\DecimationMethod\DecimationMethod\DecimationMethod\obj\Debug\net10.0-windows\DecimationMethod.genruntimeconfig.cache
+C:\My\2kurs\TI\InformationTheory\Lab1\DecimationMethod\DecimationMethod\DecimationMethod\obj\Debug\net10.0-windows\ref\DecimationMethod.dll
