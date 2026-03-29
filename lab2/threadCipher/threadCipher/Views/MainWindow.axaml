@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:threadCipher.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="threadCipher.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Шифратор (LFSR)" Width="900" Height="600">
+
+    <Grid ColumnDefinitions="*, *" Margin="20">
+
+        <StackPanel Grid.Column="0" Spacing="10" Margin="0,0,10,0">
+            <TextBlock Text="Входные данные" FontSize="18" FontWeight="Bold"/>
+
+            <TextBlock Text="Текст для шифрования:"/>
+            <TextBox Name="InputTextBox" Height="100" AcceptsReturn="True"
+                     TextWrapping="Wrap" Watermark="Введите текст здесь..."
+                     KeyUp="InputTextBox_KeyUp"/>
+
+            <Button Content="Выбрать файл" Click="OpenFileButton_Click"
+                    HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"/>
+
+            <TextBlock Text="Первые биты файла (Binary):" Margin="0,10,0,0"/>
+            <TextBox Name="BitsPreviewBox" IsReadOnly="True" Height="80"
+                     Background="{DynamicResource SystemControlBackgroundChromeMediumLowBrush}"
+                     TextWrapping="Wrap"/>
+        </StackPanel>
+
+        <Border Grid.Column="0" BorderBrush="Gray" BorderThickness="0,0,1,0" Margin="0,0,-1,0"/>
+
+        <StackPanel Grid.Column="1" Spacing="10" Margin="10,0,0,0">
+            <TextBlock Text="Управление и Ключ" FontSize="18" FontWeight="Bold"/>
+
+            <TextBlock Text="Ключ (ровно 30 бит 0/1):"/>
+            <TextBox Name="KeyTextBox"
+                     Watermark="Введите 30 символов (0 или 1)"
+                     MaxLength="30"
+                     TextInput="KeyTextBox_TextInput"
+                     TextChanged="KeyTextBox_TextChanged"/>
+            <TextBlock Name="KeyCountLabel" Text="Введено: 0 / 30" FontSize="10" Foreground="Gray"/>
+
+            <Button Name="EncryptDecryptButton"
+                    Click="EncryptDecryptButton_Click"
+                    IsEnabled="False"
+                    HorizontalAlignment="Stretch"
+                    HorizontalContentAlignment="Center"
+                    Padding="10,8">
+                <TextBlock Text="Зашифровать / Расшифровать"
+                           TextWrapping="Wrap"
+                           TextAlignment="Center"/>
+            </Button>
+
+            <Button Name="SaveResultButton"
+                    Click="SaveResultButton_Click"
+                    HorizontalAlignment="Stretch"
+                    HorizontalContentAlignment="Center"
+                    Padding="10,8"
+                    IsEnabled="False">
+                <TextBlock Text="Сохранить результат"
+                           TextWrapping="Wrap"
+                           TextAlignment="Center"/>
+            </Button>
+
+            <TextBlock Text="Биты ключевой последовательности (LFSR):" Margin="0,10,0,0"/>
+            <TextBox Name="LfsrBitsBox" IsReadOnly="True" Height="60" TextWrapping="Wrap"
+                     Background="{DynamicResource SystemControlBackgroundChromeMediumLowBrush}"/>
+
+            <TextBlock Text="Биты результата:"/>
+            <TextBox Name="ResultBitsBox" IsReadOnly="True" Height="80" TextWrapping="Wrap"
+                     Background="{DynamicResource SystemControlBackgroundChromeMediumLowBrush}"/>
+        </StackPanel>
+
+    </Grid>
+
+</Window>
