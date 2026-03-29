@@ -1,0 +1,43 @@
+## --- [ Сборка и бинарники ] ---
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+publish/
+
+## --- [ Visual Studio ] ---
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+*.userprefs
+
+## --- [ Avalonia Specific ] ---
+# Временные файлы дизайнера и превьюера
+.avalonia/
+# Если используешь компиляцию XAML в сборку
+*.g.cs
+*.g.i.cs
+
+## --- [ Пакеты и зависимости ] ---
+# NuGet-пакеты (лучше восстанавливать их при сборке)
+node_modules/
+packages/
+*.nuget.props
+*.nuget.targets
+
+## --- [ Rider / IntelliJ / Cursor (VS Code) ] ---
+.idea/
+.vscode/
+*.swp
+*.DS_Store
+
+## --- [ Операционная система ] ---
+Thumbs.db
+desktop.ini
+
+## --- [ Пользовательские конфиги ] ---
+# Скрываем локальные настройки, если есть (например, ключи API)
+appsettings.Development.json
+*.local.json

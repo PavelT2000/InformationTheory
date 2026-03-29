@@ -1,0 +1,107 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\My\\Univer\\TI\\lab2var11\\threadCipher\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2CE6EDEC-4866-4F0B-B5C7-A03246941974}|threadCipher\\threadCipher.csproj|c:\\my\\univer\\ti\\lab2var11\\threadcipher\\threadcipher\\lfsrcipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CE6EDEC-4866-4F0B-B5C7-A03246941974}|threadCipher\\threadCipher.csproj|solutionrelative:threadcipher\\lfsrcipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CE6EDEC-4866-4F0B-B5C7-A03246941974}|threadCipher\\threadCipher.csproj|c:\\my\\univer\\ti\\lab2var11\\threadcipher\\threadcipher\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{2CE6EDEC-4866-4F0B-B5C7-A03246941974}|threadCipher\\threadCipher.csproj|solutionrelative:threadcipher\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CE6EDEC-4866-4F0B-B5C7-A03246941974}|threadCipher\\threadCipher.csproj|c:\\my\\univer\\ti\\lab2var11\\threadcipher\\threadcipher\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CE6EDEC-4866-4F0B-B5C7-A03246941974}|threadCipher\\threadCipher.csproj|solutionrelative:threadcipher\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CE6EDEC-4866-4F0B-B5C7-A03246941974}|threadCipher\\threadCipher.csproj|c:\\my\\univer\\ti\\lab2var11\\threadcipher\\threadcipher\\app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{2CE6EDEC-4866-4F0B-B5C7-A03246941974}|threadCipher\\threadCipher.csproj|solutionrelative:threadcipher\\app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2CE6EDEC-4866-4F0B-B5C7-A03246941974}|threadCipher\\threadCipher.csproj|c:\\my\\univer\\ti\\lab2var11\\threadcipher\\threadcipher\\viewlocator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2CE6EDEC-4866-4F0B-B5C7-A03246941974}|threadCipher\\threadCipher.csproj|solutionrelative:threadcipher\\viewlocator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.axaml",
+              "DocumentMoniker": "C:\\My\\Univer\\TI\\lab2var11\\threadCipher\\threadCipher\\App.axaml",
+              "RelativeDocumentMoniker": "threadCipher\\App.axaml",
+              "ToolTip": "C:\\My\\Univer\\TI\\lab2var11\\threadCipher\\threadCipher\\App.axaml",
+              "RelativeToolTip": "threadCipher\\App.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-29T18:47:02.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ViewLocator.cs",
+              "DocumentMoniker": "C:\\My\\Univer\\TI\\lab2var11\\threadCipher\\threadCipher\\ViewLocator.cs",
+              "RelativeDocumentMoniker": "threadCipher\\ViewLocator.cs",
+              "ToolTip": "C:\\My\\Univer\\TI\\lab2var11\\threadCipher\\threadCipher\\ViewLocator.cs",
+              "RelativeToolTip": "threadCipher\\ViewLocator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T18:40:54.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.axaml",
+              "DocumentMoniker": "C:\\My\\Univer\\TI\\lab2var11\\threadCipher\\threadCipher\\Views\\MainWindow.axaml",
+              "RelativeDocumentMoniker": "threadCipher\\Views\\MainWindow.axaml",
+              "ToolTip": "C:\\My\\Univer\\TI\\lab2var11\\threadCipher\\threadCipher\\Views\\MainWindow.axaml",
+              "RelativeToolTip": "threadCipher\\Views\\MainWindow.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-29T11:00:46.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LfsrCipher.cs",
+              "DocumentMoniker": "C:\\My\\Univer\\TI\\lab2var11\\threadCipher\\threadCipher\\LfsrCipher.cs",
+              "RelativeDocumentMoniker": "threadCipher\\LfsrCipher.cs",
+              "ToolTip": "C:\\My\\Univer\\TI\\lab2var11\\threadCipher\\threadCipher\\LfsrCipher.cs",
+              "RelativeToolTip": "threadCipher\\LfsrCipher.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T11:00:22.003Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.axaml.cs",
+              "DocumentMoniker": "C:\\My\\Univer\\TI\\lab2var11\\threadCipher\\threadCipher\\Views\\MainWindow.axaml.cs",
+              "RelativeDocumentMoniker": "threadCipher\\Views\\MainWindow.axaml.cs",
+              "ToolTip": "C:\\My\\Univer\\TI\\lab2var11\\threadCipher\\threadCipher\\Views\\MainWindow.axaml.cs",
+              "RelativeToolTip": "threadCipher\\Views\\MainWindow.axaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-29T10:46:10.063Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

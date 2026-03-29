@@ -1,0 +1,2 @@
+This is test case for lfsr cipher
+Это тестовый текст для потокового шифрования
