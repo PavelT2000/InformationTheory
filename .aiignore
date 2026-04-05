@@ -1,0 +1,45 @@
+# Build directories
+**/bin/
+**/obj/
+**/Release/
+**/Debug/
+
+# Visual Studio / IDE settings
+**/.vs/
+**/*.sln
+**/*.slnx
+**/*.suo
+**/*.user
+**/*.vsidx
+**/*.cache
+**/*.v2
+**/*.v9
+**/*.v10
+**/.futdcache
+**/.editorconfig
+
+# NuGet and Dependencies
+**/packages/
+**/project.assets.json
+**/project.nuget.cache
+**/*.nuget.dgspec.json
+**/*.g.props
+**/*.g.targets
+
+# Temporary/Lock files
+**/~$*
+**/*.tmp
+**/*.log
+
+# Executables and Binaries
+**/*.exe
+**/*.dll
+**/*.pdb
+**/*.so
+**/*.dylib
+**/*.zip
+**/*.rar
+
+# OS generated files
+.DS_Store
+Thumbs.db
