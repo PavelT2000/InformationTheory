@@ -1,0 +1,575 @@
+=== PROJECT HIERARCHY ===
+├── .aiignore
+├── Lab1
+│   └── CryptoSystems
+│       ├── CryptoSystems
+│       │   ├── CryptoSystems.csproj
+│       │   ├── DecimationCryptoSystem.cs
+│       │   ├── Form1.Designer.cs
+│       │   ├── Form1.cs
+│       │   ├── Form1.resx
+│       │   ├── ICryptoSystem.cs
+│       │   ├── Program.cs
+│       │   └── VigneraGeneratedCryptoSystem.cs
+│       └── Отчет.docx
+├── lab2
+│   ├── Lfsr Регистр.xlsx
+│   ├── screenshots
+│   │   ├── audio
+│   │   │   ├── audio1.png
+│   │   │   ├── audio2.png
+│   │   │   ├── audio3.png
+│   │   │   ├── audio4.png
+│   │   │   └── audio5.png
+│   │   ├── picture
+│   │   │   ├── picture1.png
+│   │   │   ├── picture2.png
+│   │   │   ├── picture3.png
+│   │   │   ├── picture4.png
+│   │   │   └── picture5.png
+│   │   ├── text
+│   │   │   ├── text1.png
+│   │   │   ├── text2.png
+│   │   │   ├── text3.png
+│   │   │   ├── text4.png
+│   │   │   └── text5.png
+│   │   └── video
+│   │       ├── video1.png
+│   │       ├── video2.png
+│   │       ├── video3.png
+│   │       ├── video4.png
+│   │       └── video5.png
+│   ├── testFiles
+│   │   ├── testAudio.mp3
+│   │   ├── testAudioEnc.mp3
+│   │   ├── testAudioUnEnc.mp3
+│   │   ├── testPicture.jpg
+│   │   ├── testPictureEnc.jpg
+│   │   ├── testPictureUnEnc.jpg
+│   │   ├── testText.txt
+│   │   ├── testTextEnc.txt
+│   │   ├── testTextUnEnc.txt
+│   │   ├── testTextUnEncWrong.txt
+│   │   ├── testVideo.mp4
+│   │   ├── testVideoEnc.mp4
+│   │   └── testVideoUnEnc.mp4
+│   ├── threadCipher
+│   │   ├── .gitignore
+│   │   └── threadCipher
+│   │       ├── App.axaml
+│   │       ├── App.axaml.cs
+│   │       ├── Assets
+│   │       │   └── avalonia-logo.ico
+│   │       ├── LfsrCipher.cs
+│   │       ├── Program.cs
+│   │       ├── ViewLocator.cs
+│   │       ├── ViewModels
+│   │       │   ├── MainWindowViewModel.cs
+│   │       │   └── ViewModelBase.cs
+│   │       ├── Views
+│   │       │   ├── MainWindow.axaml
+│   │       │   └── MainWindow.axaml.cs
+│   │       ├── app.manifest
+│   │       └── threadCipher.csproj
+│   ├── ~$Lfsr Регистр.xlsx
+│   ├── Задание.docx
+│   └── Отчёт.docx
+└── lab2var11
+    ├── Lfsr Регистр.xlsx
+    ├── screenshots
+    │   ├── audio
+    │   │   ├── audio1.png
+    │   │   ├── audio2.png
+    │   │   ├── audio3.png
+    │   │   ├── audio4.png
+    │   │   └── audio5.png
+    │   ├── picture
+    │   │   ├── picture1.png
+    │   │   ├── picture2.png
+    │   │   ├── picture3.png
+    │   │   ├── picture4.png
+    │   │   └── picture5.png
+    │   ├── text
+    │   │   ├── text1.png
+    │   │   ├── text2.png
+    │   │   ├── text3.png
+    │   │   ├── text4.png
+    │   │   └── text5.png
+    │   └── video
+    │       ├── video1.png
+    │       ├── video2.png
+    │       ├── video3.png
+    │       ├── video4.png
+    │       └── video5.png
+    ├── testFiles
+    │   ├── testAudio.mp3
+    │   ├── testAudioEnc.mp3
+    │   ├── testAudioUnEnc.mp3
+    │   ├── testAudionew.mp3
+    │   ├── testPicture.jpg
+    │   ├── testPictureEnc.jpg
+    │   ├── testPictureUnEnc.jpg
+    │   ├── testText.txt
+    │   ├── testTextEnc.txt
+    │   ├── testTextUnEnc.txt
+    │   ├── testTextUnEncWrong.txt
+    │   ├── testVideo.mp4
+    │   ├── testVideoEnc.mp4
+    │   └── testVideoUnEnc.mp4
+    ├── threadCipher
+    │   ├── .gitignore
+    │   └── threadCipher
+    │       ├── App.axaml
+    │       ├── App.axaml.cs
+    │       ├── Assets
+    │       │   └── avalonia-logo.ico
+    │       ├── LfsrCipher.cs
+    │       ├── Program.cs
+    │       ├── ViewLocator.cs
+    │       ├── ViewModels
+    │       │   ├── MainWindowViewModel.cs
+    │       │   └── ViewModelBase.cs
+    │       ├── Views
+    │       │   ├── MainWindow.axaml
+    │       │   └── MainWindow.axaml.cs
+    │       ├── app.manifest
+    │       └── threadCipher.csproj
+    ├── ~$Lfsr Регистр.xlsx
+    ├── Задание.docx
+    └── Отчёт.docx
+
+=== SOURCE CODE ===
+
+--- FILE: Lab1\CryptoSystems\CryptoSystems\ICryptoSystem.cs ---
+﻿using System;
+using System.Collections.Generic;
+using System.Numerics;
+using System.Text;
+
+namespace CryptoSystems
+{
+    public interface ICryptoSystem
+    {
+        public bool ValidateSymbol(char  symbol);
+        public string ValidateKey(string key, out string output);
+
+        public string Cipher(string plainText, DataGridView dgv);
+
+        public string DeCipher(string cipherText, DataGridView dgv);
+
+        public void SetKey(string key, out string output);
+
+        public string GetKey();
+        
+    }
+}
+
+
+--- FILE: Lab1\CryptoSystems\CryptoSystems\DecimationCryptoSystem.cs ---
+﻿using System;
+using System.Collections.Generic;
+using System.Numerics;
+using System.Text;
+using static System.Net.Mime.MediaTypeNames;
+
+namespace CryptoSystems
+{
+    public class DecimationCryptoSystem : ICryptoSystem
+    {
+        //private static Dictionary<char, int> alphToNum = new Dictionary<char, int>()
+        //{
+        //    {'а',1 },{'б',2 },{'в',3 },{'г',4 },{'д',5 },
+        //    {'е',6 },{'ё',7 },{'ж',8 },{'з',9 },{'и',10 },
+        //    {'й',11 },{'к',12 },{'л',13},{'м',14 },{'н',15 },
+        //    {'о',16 },{'п',17 },{'р',18},{'с',19 },{'т',20 },
+        //    {'у',21 },{'ф',22 },{'х',23},{'ц',24 },{'ч',25 },
+        //    {'ш',26 },{'щ',27 },{'ъ',28},{'ы',29 },{'ь',30 },
+        //    {'э',31 },{'ю',32 },{'я',33}
+        //};
+        private static Dictionary<char, int> alphToNum = new Dictionary<char, int>()
+        {
+            {'а',0 },{'б',1 },{'в',2 },{'г',3 },{'д',4 },
+            {'е',5 },{'ё',6 },{'ж',7 },{'з',8 },{'и',9 },
+            {'й',10 },{'к',11 },{'л',12},{'м',13 },{'н',14 },
+            {'о',15 },{'п',16 },{'р',17},{'с',18 },{'т',19 },
+            {'у',20 },{'ф',21 },{'х',22},{'ц',23 },{'ч',24 },
+            {'ш',25 },{'щ',26 },{'ъ',27},{'ы',28 },{'ь',29 },
+            {'э',30 },{'ю',31 },{'я',32}
+        };
+        private static char[] numToAlph = new char[]
+        {
+            //' ', // Индекс 0 не используется (заглушка)
+            'а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и',
+            'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т',
+            'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'ы', 'ь',
+            'э', 'ю', 'я'
+        };
+
+        private static BigInteger key { get; set; }
+
+        private const int dgvMax = 15;
+        private const int n = 33;
+
+
+
+        public bool ValidateSymbol(char symbol)
+        {
+            if (alphToNum.ContainsKey(symbol))
+                return true;
+            else
+                return false;
+        }
+
+        public string ValidateKey(string key, out string output)
+        {
+            output = string.Empty;
+            string validatedKey = "";
+            int skippedCount = 0;
+            for (int i = 0; i < key.Length; i++)
+            {
+                char c = key[i];
+                if (char.IsDigit(c))
+                    validatedKey += c;
+                else
+                    skippedCount++;
+            }
+            if (validatedKey == "" && skippedCount != 0)
+            {
+                output = $"В ключе отсутствуют цифры, пропущено {skippedCount} лишних символов, берётся ключ по умолчанию (1)\n";
+                validatedKey = "1";
+            }
+            else if (validatedKey == "")
+            {
+                output = $"Ключ пустой, берётся ключ по умолчанию (1)\n";
+                validatedKey = "1";
+            }
+            else if (skippedCount != 0)
+            {
+                output = $"Ключ содержит что-то кроме цифр, пропущено {skippedCount} лишних символов\n";
+            }
+            BigInteger preKey = BigInteger.Parse(validatedKey);
+            if (BigInteger.GreatestCommonDivisor(preKey, n) != 1)
+            {
+                BigInteger nearest;
+                long offset = 1;
+                while (true)
+                {
+                    if (BigInteger.GreatestCommonDivisor(preKey + offset, n) == 1)
+                    {
+                        nearest = preKey + offset;
+                        break;
+                    }
+
+
+                    if (preKey - offset > 0 && BigInteger.GreatestCommonDivisor(preKey - offset, n) == 1)
+                    {
+                        nearest = preKey - offset;
+                        break;
+                    }
+                    offset++;
+                }
+                validatedKey = nearest.ToString();
+                output += $"Ключ не взаимно простой с 33, используется ближайший походящий ключ({validatedKey.ToString()})";
+
+
+            }
+            else
+            {
+                validatedKey = preKey.ToString();
+            }
+            return validatedKey;
+        }
+
+        public string Cipher(string plainText, DataGridView dgv)
+        {
+            if (plainText.Length == 0)
+                return "";
+
+            string cipherText = "";
+            dgv.Columns.Clear();
+            dgv.Rows.Clear();
+            int j = 0;
+            for (int i = 0; i < plainText.Length; i++)
+            {
+                if (ValidateSymbol(char.ToLower(plainText[i])))
+                {
+
+                    dgv.Columns.Add($"col({j}", "");
+                    dgv.Columns[j].Width = 130;
+                    
+                    if (j >= dgvMax)
+                        break;
+                    j++;
+                }
+            }
+            if (dgv.Rows.Count > 0)
+            {
+                dgv.Rows.Add(3);
+            }
+            j = 0;
+            for (int i = 0; i < plainText.Length; i++)
+            {
+                char plainSymbol = char.ToLower(plainText[i]);
+                if (ValidateSymbol(plainSymbol))
+                {
+
+                    int plainVal = alphToNum[char.ToLower(plainSymbol)];
+
+
+                    int cipherVal = (int)(plainVal * key % n);
+                    char cipherSymbol = numToAlph[cipherVal];
+                    if (j < dgvMax)
+                    {
+                        dgv[j, 0].Value = plainSymbol;
+                        dgv[j, 1].Value = $"{plainVal}({plainSymbol})*{key}%{n}={cipherVal}({cipherSymbol})";
+                        dgv[j, 2].Value = cipherSymbol;
+                    }
+                    cipherText += cipherSymbol;
+                    j++;
+                }
+                else
+                {
+                    cipherText += plainSymbol;
+                }
+            }
+            return cipherText;
+        }
+
+        public string DeCipher(string cipherText, DataGridView dgv)
+        {
+            if (cipherText.Length == 0)
+                return "";
+            string plainText = "";
+            dgv.Columns.Clear();
+            dgv.Rows.Clear();
+            int j = 0;
+            for (int i = 0; i < cipherText.Length; i++)
+            {
+                if (ValidateSymbol(char.ToLower(cipherText[i])))
+                {
+                    dgv.Columns.Add($"col({i}", "");
+                    dgv.Columns[j].Width = 130;
+                    j++;
+                }
+            }
+            if (dgv.Rows.Count > 0)
+            {
+                dgv.Rows.Add(3);
+            }
+            j = 0;
+            for (int i = 0; i < cipherText.Length; i++)
+            {
+                var cipherSymbol = cipherText[i];
+                if (ValidateSymbol(char.ToLower(cipherSymbol)))
+                {
+                    int cipherVal = alphToNum[char.ToLower(cipherSymbol)];
+                    BigInteger temp = cipherVal;
+                    while (temp % key != 0)
+                        temp += n;
+                    int plainVal = (int)(temp / key);
+                    char plainSymbol = numToAlph[plainVal];
+                    if (j < dgvMax)
+                    {
+                        dgv[j, 0].Value = plainSymbol;
+                        dgv[j, 1].Value = $"{plainVal}({plainSymbol})*{key}%{n}={cipherVal}({cipherSymbol})";
+                        dgv[j, 2].Value = cipherSymbol;
+                    }
+                    plainText += plainSymbol;
+                    j++;
+                }
+                else
+                {
+                    plainText += cipherSymbol;
+                }
+            }
+            return plainText;
+        }
+
+        public void SetKey(string key, out string output)
+        {
+            string validatedKey = ValidateKey(key, out output);
+            DecimationCryptoSystem.key = BigInteger.Parse(validatedKey);
+        }
+
+        public string GetKey()
+        {
+            return DecimationCryptoSystem.key.ToString();
+        }
+
+
+    }
+}
+
+
+
+--- FILE: lab2\threadCipher\threadCipher\LfsrCipher.cs ---
+using System;
+using System.Linq;
+using System.Text;
+
+namespace threadCipher;
+
+/// <summary>
+/// Поточное шифрование XOR с гаммой от LFSR (полином x^30 + x^16 + x^15 + x + 1).
+/// </summary>
+internal sealed class LfsrCipher
+{
+    private const int SeedBitCount = 30;
+    private const uint RegisterMask = 0x3FFFFFFF;
+
+    private uint _register;
+
+    private uint GetNextBit()
+    {
+        uint b30 = (_register >> 29) & 1;
+        uint b16 = (_register >> 15) & 1;
+        uint b15 = (_register >> 14) & 1;
+        uint b1 = _register & 1;
+
+        uint feedback = b30 ^ b16 ^ b15 ^ b1;
+        uint outputBit = _register & 1;
+        _register = ((_register >> 1) | (feedback << 29)) & RegisterMask;
+
+        return outputBit;
+    }
+
+    public (byte[] Result, string KeyStreamPreview) Execute(byte[] data, string seedString)
+    {
+        ArgumentNullException.ThrowIfNull(data);
+        ValidateSeed(seedString);
+
+        _register = 0;
+        for (int i = 0; i < SeedBitCount; i++)
+        {
+            if (seedString[i] == '1')
+                _register |= 1u << i;
+        }
+
+        var result = new byte[data.Length];
+        var keyStreamBits = new StringBuilder();
+
+        for (int i = 0; i < data.Length; i++)
+        {
+            byte keyByte = 0;
+            for (int bit = 0; bit < 8; bit++)
+            {
+                uint b = GetNextBit();
+                keyByte |= (byte)(b << bit);
+
+                if (i == 0 || i * 8 + bit < 64)
+                    keyStreamBits.Append(b);
+            }
+
+            result[i] = (byte)(data[i] ^ keyByte);
+        }
+
+        return (result, keyStreamBits.ToString());
+    }
+
+    private static void ValidateSeed(string seed)
+    {
+        if (seed.Length != SeedBitCount)
+            throw new ArgumentException($"Ключ должен быть ровно {SeedBitCount} бит.", nameof(seed));
+
+        if (seed.Any(c => c is not ('0' or '1')))
+            throw new ArgumentException("Ключ должен содержать только символы 0 и 1.", nameof(seed));
+    }
+}
+
+
+--- FILE: lab2\threadCipher\threadCipher\ViewModels\MainWindowViewModel.cs ---
+﻿namespace threadCipher.ViewModels
+{
+    public partial class MainWindowViewModel : ViewModelBase
+    {
+        public string Greeting { get; } = "Welcome to Avalonia!";
+    }
+}
+
+
+--- FILE: lab2\threadCipher\threadCipher\threadCipher.csproj ---
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <AvaloniaResource Include="Assets\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia" Version="11.3.12" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.3.12" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.3.12" />
+    <PackageReference Include="Avalonia.Fonts.Inter" Version="11.3.12" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+    <PackageReference Include="Avalonia.Diagnostics" Version="11.3.12">
+      <IncludeAssets Condition="'$(Configuration)' != 'Debug'">None</IncludeAssets>
+      <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1" />
+  </ItemGroup>
+</Project>
+
+
+--- FILE: Lab1\CryptoSystems\CryptoSystems\CryptoSystems.csproj ---
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+</Project>
+
+--- FILE: lab2\threadCipher\threadCipher\Program.cs ---
+﻿using System;
+using Avalonia;
+
+namespace threadCipher
+{
+    internal sealed class Program
+    {
+        // Initialization code. Don't use any Avalonia, third-party APIs or any
+        // SynchronizationContext-reliant code before AppMain is called: things aren't initialized
+        // yet and stuff might break.
+        [STAThread]
+        public static void Main(string[] args) => BuildAvaloniaApp()
+            .StartWithClassicDesktopLifetime(args);
+
+        // Avalonia configuration, don't remove; also used by visual designer.
+        public static AppBuilder BuildAvaloniaApp()
+            => AppBuilder.Configure<App>()
+                .UsePlatformDetect()
+                .WithInterFont()
+                .LogToTrace();
+    }
+}
+
+
+--- FILE: Lab1\CryptoSystems\CryptoSystems\Program.cs ---
+namespace CryptoSystems
+{
+    internal static class Program
+    {
+        /// <summary>
+        ///  The main entry point for the application.
+        /// </summary>
+        [STAThread]
+        static void Main()
+        {
+            // To customize application configuration such as set high DPI settings or default font,
+            // see https://aka.ms/applicationconfiguration.
+            ApplicationConfiguration.Initialize();
+            Application.Run(new Form1());
+        }
+    }
+}
