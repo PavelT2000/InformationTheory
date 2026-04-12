@@ -1,0 +1,97 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:RsaLab.ViewModels"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="920" d:DesignHeight="640"
+        x:Class="RsaLab.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Title="Лабораторная: RSA (шифрование файлов)"
+        Width="920" Height="640"
+        MinWidth="720" MinHeight="520">
+
+    <Design.DataContext>
+        <vm:MainWindowViewModel/>
+    </Design.DataContext>
+
+    <TabControl Margin="12">
+        <TabItem Header="Ключи">
+            <ScrollViewer>
+                <StackPanel Spacing="10" MaxWidth="820" HorizontalAlignment="Left">
+                    <TextBlock TextWrapping="Wrap" Opacity="0.85"
+                               Text="Введите простые p и q, затем закрытый ключ d. Программа проверит простоту, вычислит r = p·q, φ(r) и открытый e через расширенный алгоритм Евклида (e·d ≡ 1 mod φ)."/>
+                    <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto" RowSpacing="8" ColumnSpacing="12">
+                        <TextBlock Grid.Row="0" Grid.Column="0" VerticalAlignment="Center" Text="p:"/>
+                        <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding PText}" PlaceholderText="простое число"/>
+                        <TextBlock Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Text="q:"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding QText}" PlaceholderText="простое число"/>
+                        <TextBlock Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" Text="d (закрытый):"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding DText}" PlaceholderText="1 &lt; d &lt; φ(r), взаимно просто с φ(r)"/>
+                    </Grid>
+                    <Button Content="Вычислить e и проверить ключи" Command="{Binding ComputeKeysCommand}" HorizontalAlignment="Left"/>
+                    <Separator/>
+                    <TextBlock FontWeight="SemiBold" Text="Результат"/>
+                    <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto" RowSpacing="6" ColumnSpacing="12">
+                        <TextBlock Grid.Row="0" Grid.Column="0" Text="r = p·q:"/>
+                        <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding RText}"/>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Text="φ(r):"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding PhiText}"/>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Text="e (открытый):"/>
+                        <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding EText}"/>
+                    </Grid>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding KeysStatus}"/>
+                </StackPanel>
+            </ScrollViewer>
+        </TabItem>
+
+        <TabItem Header="Шифрование">
+            <Grid RowDefinitions="Auto,Auto,Auto,*,Auto" ColumnDefinitions="*" Margin="0,8,0,0" RowSpacing="8">
+                <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8">
+                    <TextBox Text="{Binding EncryptInputPath}" PlaceholderText="Входной файл (любой тип)"/>
+                    <Button Grid.Column="1" Content="Обзор…" Command="{Binding BrowseEncryptInputCommand}" MinWidth="100"/>
+                </Grid>
+                <Grid Grid.Row="1" ColumnDefinitions="*,Auto" ColumnSpacing="8">
+                    <TextBox Text="{Binding EncryptOutputPath}" PlaceholderText="Выход: бинарный файл (поток 16-битных блоков)"/>
+                    <Button Grid.Column="1" Content="Обзор…" Command="{Binding BrowseEncryptOutputCommand}" MinWidth="100"/>
+                </Grid>
+                <Button Grid.Row="2" Content="Зашифровать" Command="{Binding RunEncryptCommand}" HorizontalAlignment="Left"/>
+                <Border Grid.Row="3" BorderBrush="#ccc" BorderThickness="1" CornerRadius="4" Padding="8">
+                    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+                        <TextBlock TextWrapping="Wrap" FontFamily="Consolas,Courier New,monospace"
+                                   Text="{Binding EncryptDecimalOutput}"/>
+                    </ScrollViewer>
+                </Border>
+                <TextBlock Grid.Row="4" TextWrapping="Wrap" Text="{Binding EncryptStatus}"/>
+            </Grid>
+        </TabItem>
+
+        <TabItem Header="Расшифрование">
+            <StackPanel Spacing="10" Margin="0,8,0,0">
+                <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8">
+                    <TextBox Text="{Binding DecryptInputPath}" PlaceholderText="Зашифрованный бинарный файл"/>
+                    <Button Grid.Column="1" Content="Обзор…" Command="{Binding BrowseDecryptInputCommand}" MinWidth="100"/>
+                </Grid>
+                <Grid ColumnDefinitions="*,Auto" ColumnSpacing="8">
+                    <TextBox Text="{Binding DecryptOutputPath}" PlaceholderText="Куда сохранить восстановленный файл"/>
+                    <Button Grid.Column="1" Content="Обзор…" Command="{Binding BrowseDecryptOutputCommand}" MinWidth="100"/>
+                </Grid>
+                <Button Content="Расшифровать" Command="{Binding RunDecryptCommand}" HorizontalAlignment="Left"/>
+                <TextBlock TextWrapping="Wrap" Text="{Binding DecryptStatus}"/>
+            </StackPanel>
+        </TabItem>
+
+        <TabItem Header="Первообразные корни (вариант p = 31)">
+            <ScrollViewer>
+                <StackPanel Spacing="10" MaxWidth="820" HorizontalAlignment="Left" Margin="0,8,0,0">
+                    <TextBlock TextWrapping="Wrap" Opacity="0.85"
+                               Text="Для отчёта: поиск всех первообразных корней по модулю простого p. По умолчанию p = 31. Можно сменить p для проверки."/>
+                    <Grid ColumnDefinitions="Auto,*" ColumnSpacing="12">
+                        <TextBlock VerticalAlignment="Center" Text="p:"/>
+                        <TextBox Text="{Binding PrimitiveRootsP}" PlaceholderText="31"/>
+                    </Grid>
+                    <TextBlock TextWrapping="Wrap" Text="{Binding PrimitiveRootsResult}"/>
+                </StackPanel>
+            </ScrollViewer>
+        </TabItem>
+    </TabControl>
+</Window>
